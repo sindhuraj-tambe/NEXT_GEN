@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account opening Form</title>
+</head>
+<body>
+    <h1>Bank Account Opening Form</h1>
+    <form action="/submit_account" method="POST">
+        <!-- Full Name -->
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required><br><br>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" id="gender-male" name="gender" value="Male" required>
+        <label for="gender-male">Male</label>
+        <input type="radio" id="gender-female" name="gender" value="Female">
+        <label for="gender-female">Female</label><br><br>
+
+        <!-- Address -->
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+
+        <!-- Contact Information -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Account Type -->
+        <label for="account-type">Account Type:</label>
+        <select id="account-type" name="account-type" required>
+            <option value="savings">Savings Account</option>
+            <option value="current">Current Account</option>
+            <option value="joint">Joint Account</option>
+        </select><br><br>
+
+        <!-- Initial Deposit -->
+        <label for="initial-deposit">Initial Deposit Amount (in $):</label>
+        <input type="number" id="initial-deposit" name="initial-deposit" min="0" required><br><br>
+
+        <!-- Preferred Branch -->
+        <label for="branch">Preferred Branch:</label>
+        <input type="text" id="branch" name="branch" required><br><br>
+
+        <!-- Nationality -->
+        <label for="nationality">Nationality:</label>
+        <select id="nationality" name="nationality" required>
+            <option value="american">American</option>
+            <option value="indian">Indian</option>
+            <option value="canadian">Canadian</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <!-- Terms and Conditions -->
+        <label for="terms">I agree to the <a href="/terms">Terms and Conditions</a></label>
+        <input type="checkbox" id="terms" name="terms" required><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Open Account">
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.windows-logo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 160px;
+    height: 160px;
+}
+
+.windows-window {
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    background-color: #00a4ef;
+}
+
+.top-left {
+    background-color: #00a4ef;
+}
+
+.top-right {
+    background-color: #7ac7e5;
+}
+
+.bottom-left {
+    background-color: #7ac7e5;
+}
+
+.bottom-right {
+    background-color: #00a4ef;
+}

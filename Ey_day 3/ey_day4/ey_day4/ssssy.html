@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weight vs Weightless</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .image-box {
+      text-align: center;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .caption {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Visualizing Weight vs Weightless</h1>
+
+  <div class="container">
+    <div class="image-box">
+      <img src="C:\Users\Dell\EY_day 1\Ey_day 3\images\mexico-obesity-franco_40329a18-3567-11e7-9993-2f2d999294f7.avif" alt="Person with weight">
+      <div class="caption">Person with weight</div>
+    </div>
+    <div class="image-box">
+      <img src="" alt="Person weightless">
+      <div class="caption">Person weightless</div>
+    </div>
+  </div>
+
+  <script>
+    function calculateBMI(weight, height) {
+      const bmi = weight / (height * height);
+      return bmi;
+    }
+
+    function categorizeBMI(bmi) {
+      if (bmi < 18.5) {
+        return 'Underweight';
+      } else if (bmi >= 18.5 && bmi < 24.9) {
+        return 'Normal weight';
+      } else if (bmi >= 25 && bmi < 29.9) {
+        return 'Overweight';
+      } else if (bmi >= 30) {
+        return 'Obese';
+      }
+    }
+
+    let weight = 70;  
+    let height = 1.75;
+    
+    let bmi = calculateBMI(weight, height);
+    let category = categorizeBMI(bmi);
+
+    console.log(`Your BMI is: ${bmi.toFixed(2)}`);
+    console.log(`Category: ${category}`);
+  </script>
+
+</body>
+</html>

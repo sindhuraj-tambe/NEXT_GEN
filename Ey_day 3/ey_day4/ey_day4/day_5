@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input {
+      margin: 5px;
+      padding: 8px;
+      width: 200px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>BMI Calculator</h1>
+  <form id="bmi-form" onsubmit="calculateBMI(event)">
+    <input type="number" id="weight" placeholder="Enter weight (kg)" step="0.1" required><br>
+    <input type="number" id="height" placeholder="Enter height (cm)" step="0.1" required><br>
+    <button type="submit">Calculate BMI</button>
+  </form>
+  <div class="result" id="bmi-result"></div>
+
+  <script>
+    function calculateBMI(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Get weight and height from inputs
+      const weight = parseFloat(document.getElementById("weight").value);
+      const height = parseFloat(document.getElementById("height").value) / 100; // Convert cm to meters
+
+      if (weight > 0 && height > 0) {
+        // Calculate BMI
+        const bmi = (weight / (height * height)).toFixed(2);
+        
+        // Display result
+        const resultDiv = document.getElementById("bmi-result");
+        resultDiv.innerHTML = `<strong>Your BMI is:</strong> ${bmi}`;
+      } else {
+        alert("Please enter valid height and weight.");
+      }
+    }
+  </script>
+</body>
+</html>
+script src="d6.js"></script>

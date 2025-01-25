@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Flag of India</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .flag {
+            width: 300px;
+            height: 180px;
+            border: 1px solid #000;
+        }
+        .stripe {
+            height: 33.33%;
+            width: 100%;
+        }
+        .saffron {
+            background-color: hsl(30, 72%, 44%);
+        }
+        .white {
+            background-color: #FFFFFF;
+            position: relative;
+        }
+        .green {
+            background-color: #138808;
+        }
+        .chakra {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border: 2px solid #000080;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .chakra::after {
+            content: '';
+            width: 45px;
+            height: 45px;
+            border: 2px solid #000080;
+            border-radius: 50%;
+        }
+        .chakra-lines {
+            position: absolute;
+            width: 2px;
+            height: 50%;
+            background-color: #000080;
+            transform-origin: center bottom;
+        }
+        /* Create 24 spokes */
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .chakra-lines {
+            animation: rotate 2s infinite linear;
+        }
+        .spokes {
+            position: absolute;
+            content: '';
+        }
+    </style>
+</head>
+<body>
+    <div class="flag">
+        <div class="stripe saffron"></div>
+        <div class="stripe white">
+            <div class=></div>
+</body>

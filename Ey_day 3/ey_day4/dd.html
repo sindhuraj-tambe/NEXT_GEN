@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Flag</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .flag {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+
+        .stripe {
+            height: 33.33%;
+            width: 100%;
+            padding-left:px ;
+        }
+
+        .saffron {
+            background-color: #FF9933;
+        }
+
+        .white {
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .green {
+            background-color: #138808;
+        }
+
+        .ashoka-chakra {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #000080;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .ashoka-chakra::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 50%;
+            background-color: #000080;
+            transform: translate(-50%, -50%) rotate(0deg);
+            animation: rotate-lines 1s linear infinite;
+        }
+
+        @keyframes rotate-lines {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flag">
+        <div class="stripe saffron"></div>
+        <div class="stripe white">
+            <div class="ashoka-chakra"></div>
+        </div>
+        <div class="stripe green"></div>
+    </div>
+</body>
+</html>
